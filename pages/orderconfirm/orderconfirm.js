@@ -40,7 +40,7 @@ create(store, {
       productBuyNum: b[0].productBuyNum,
     }
     console.log(data)
-    post('/wx/pay/unified/order', data, (res) => {
+    post('/wx/pay/unifiedOrder', data, (res) => {
       if(res.data.code == "SUCCESS" && res.data.resultCode == "SUCCESS") {
         obj = res.data.response
         console.log(obj)

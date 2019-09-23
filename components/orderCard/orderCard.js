@@ -10,19 +10,10 @@ create({
     }
   },
   data: {
-    
+    statusName: ''
   },
-
-  methods: {
-    // 商品信息
-    navigatorGoodsInfo: function(e) {
-      console.log(e.currentTarget.dataset['item'])
-      wx.navigateTo({
-        url:"../goodsinfo/goodsinfo?goodsId=1"
-      });
-    },
-    orderState: function() {
-      console.log(this.data.dataList)
+  lifetimes: {
+    attached: function() {
       let a
       switch (this.properties.dataList.state) {
         case 1:
@@ -41,7 +32,19 @@ create({
           a = "交易关闭";
              break;
       }
-      return a
-    }
+      this.setData({ statusName: a })
+    },
+    detached: function() {
+      // 在组件实例被从页面节点树移除时执行
+    },
+  },
+  methods: {
+    // 商品信息
+    navigatorGoodsInfo: function(e) {
+      console.log(e.currentTarget.dataset['item'])
+      wx.navigateTo({
+        url:"../goodsinfo/goodsinfo?goodsId=1"
+      });
+    },
   }
 })

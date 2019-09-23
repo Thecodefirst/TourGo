@@ -5,7 +5,7 @@
                 <text class="taro-text orders-item-box-title-name-text">TourGo</text>
                 <text class="iconfont iconjiantouyou" style="color: rgb(204, 204, 204); font-size: 24rpx"></text>
             </view>
-            <text class="taro-text orders-item-box-title-text">{{orderState()}}</text>
+            <text class="taro-text orders-item-box-title-text">{{statusName}}</text>
         </view>
         <view class="orders-item-box-list">
             <view class="order-goods-item">

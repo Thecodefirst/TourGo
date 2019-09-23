@@ -13,70 +13,47 @@
         <swiper-item>
             <scroll-view class="scrollView" scroll-y>
                 <view style="padding: 20rpx">
-                    <view wx:for="{{todayList.list}}" class="orderCardsFather"><orderCard dataList="{{item}}"></orderCard></view>
-                    <noOrder></noOrder>
+                    <view wx:for="{{todayList.list}}" wx:key="{{index}}" class="orderCardsFather"><orderCard dataList="{{item}}"></orderCard></view>
+                    <noOrder wx:if="{{todayList.list.length == 0 || todayList.list == null}}"></noOrder>
+                    <!-- 
                     <view class="rmd-today">
                         <view class="rmd-today-title">
                             <image src="https://img.gojoy.cn/h5/assets/home/line.png"></image>
                         </view>
                         <shopCard bindincrement="navigatorGoodsInfo" dataList="{{todayList.list}}"></shopCard>
                     </view>
+                    -->
                 </view>
             </scroll-view>
         </swiper-item>
         <swiper-item>
             <scroll-view style="height:100%;" scroll-y>
-                <noOrder></noOrder>
-                <view class="rmd-today">
-                    <view class="rmd-today-title">
-                        <image src="https://img.gojoy.cn/h5/assets/home/line.png"></image>
-                    </view>
-                    <shopCard bindincrement="navigatorGoodsInfo" dataList="{{todayList.list}}"></shopCard>
-                </view>
+                <view wx:for="{{todayList.list}}" wx:key="{{index}}" class="orderCardsFather"><orderCard dataList="{{item}}"></orderCard></view>
+                <noOrder wx:if="{{todayList.list.length == 0 || todayList.list == null}}"></noOrder>
             </scroll-view>
         </swiper-item>
         <swiper-item>
             <scroll-view style="height:100%;" scroll-y>
-                <noOrder></noOrder>
-                <view class="rmd-today">
-                    <view class="rmd-today-title">
-                        <image src="https://img.gojoy.cn/h5/assets/home/line.png"></image>
-                    </view>
-                    <shopCard bindincrement="navigatorGoodsInfo" dataList="{{todayList.list}}"></shopCard>
-                </view>
+                <view wx:for="{{todayList.list}}" wx:key="{{index}}" class="orderCardsFather"><orderCard dataList="{{item}}"></orderCard></view>
+                <noOrder wx:if="{{todayList.list.length == 0 || todayList.list == null}}"></noOrder>
             </scroll-view>
         </swiper-item>
         <swiper-item>
             <scroll-view style="height:100%;" scroll-y>
-                <noOrder></noOrder>
-                <view class="rmd-today">
-                    <view class="rmd-today-title">
-                        <image src="https://img.gojoy.cn/h5/assets/home/line.png"></image>
-                    </view>
-                    <shopCard bindincrement="navigatorGoodsInfo" dataList="{{todayList.list}}"></shopCard>
-                </view>
+                <view wx:for="{{todayList.list}}" wx:key="{{index}}" class="orderCardsFather"><orderCard dataList="{{item}}"></orderCard></view>
+                <noOrder wx:if="{{todayList.list.length == 0 || todayList.list == null}}"></noOrder>
             </scroll-view>
         </swiper-item>
         <swiper-item>
             <scroll-view style="height:100%;" scroll-y>
-                <noOrder></noOrder>
-                <view class="rmd-today">
-                    <view class="rmd-today-title">
-                        <image src="https://img.gojoy.cn/h5/assets/home/line.png"></image>
-                    </view>
-                    <shopCard bindincrement="navigatorGoodsInfo" dataList="{{todayList.list}}"></shopCard>
-                </view>
+                <view wx:for="{{todayList.list}}" wx:key="{{index}}" class="orderCardsFather"><orderCard dataList="{{item}}"></orderCard></view>
+                <noOrder wx:if="{{todayList.list.length == 0 || todayList.list == null}}"></noOrder>
             </scroll-view>
         </swiper-item>
         <swiper-item>
             <scroll-view style="height:100%;" scroll-y>
-                <noOrder></noOrder>
-                <view class="rmd-today">
-                    <view class="rmd-today-title">
-                        <image src="https://img.gojoy.cn/h5/assets/home/line.png"></image>
-                    </view>
-                    <shopCard bindincrement="navigatorGoodsInfo" dataList="{{todayList.list}}"></shopCard>
-                </view>
+                <view wx:for="{{todayList.list}}" wx:key="{{index}}" class="orderCardsFather"><orderCard dataList="{{item}}"></orderCard></view>
+                <noOrder wx:if="{{todayList.list.length == 0 || todayList.list == null}}"></noOrder>
             </scroll-view>
         </swiper-item>
     </swiper>
