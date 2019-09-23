@@ -1,0 +1,54 @@
+<view class="order-detail_box">
+    <view class="order-detail-banner">
+        <view class="order-detail-banner-img">
+            <image class="taro-img" src="https://img.gojoy.cn/h5/assets/order-detail/banner-1.png"/>
+        </view>
+        <view class="order-detail-banner-title">
+            <text class="taro-text order-detail-banner-title-text">订单已取消</text>
+        </view>
+    </view>
+    <view class="order-detail-address">
+        <view class="order-detail-address-img">
+            <image class="taro-img" src="https://img.gojoy.cn/h5/assets/order-detail/icon-address.png" />
+        </view>
+        <view class="order-detail-address-right">
+            <view class="order-detail-address-right-top">
+                <text class="taro-text name">杜翔宇</text>
+                <text class="taro-text mobile">18844166493</text>
+            </view>
+            <view class="order-detail-address-right-bottom">
+                <text class="taro-text order-detail-address-right-bottom-text">北京市北京城区朝阳区义安门</text>
+            </view>
+        </view>
+    </view>
+    <view class="orderCardsFather"><orderCard></orderCard></view>
+    <view class="order-detail-info">
+        <view class="order-detail-info-title">
+            <text class="taro-text order-detail-info-title-text">订单信息</text>
+        </view>
+         <view class="order-detail-info-content">
+            <view class="order-detail-info-content-item">
+                <view class="left">
+                    <text class="taro-text left-name">订单编号：</text>
+                    <text class="taro-text left-text">2019090217093869226105</text>
+                </view>
+                <view class="right">
+                    <text class="taro-text right-btn">复制</text>
+                </view>
+            </view>
+            <view class="order-detail-info-content-item">
+                <view class="left">
+                    <text class="taro-text left-name">创建时间：</text>
+                    <text class="taro-text left-text">2019-09-02 17:09:39</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="rmd-today">
+        <view class="rmd-today-title">
+            <image src="https://img.gojoy.cn/h5/assets/home/line.png"></image>
+        </view>
+        <shopCard bindincrement="navigatorGoodsInfo" dataList="{{todayList}}"></shopCard>
+    </view>
+</view>
+  

@@ -1,0 +1,12 @@
+<view class="login">
+    <view class="logo">
+        <image src="https://img.gojoy.cn/h5/assets/login/login-logo.png" />
+    </view>
+    <button class="accreditBtn" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">
+        <view>
+            <text class="iconfont iconweixin" style="color: rgb(255, 255, 255); font-size: 30rpx;"></text>
+            <text>微信登录</text>
+        </view>
+    </button>
+</view>
+  

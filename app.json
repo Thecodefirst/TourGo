@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/orderconfirm/orderconfirm",
+    "pages/goodsinfo/goodsinfo",
+    "pages/user/index/index",
+    "pages/login/login",
+    "pages/address/addresslist/addresslist",
+    "pages/address/addressoptions/addressoptions",
+    "pages/user/myorders/myorders",
+    "pages/settings/settings",
+    "pages/user/orderdetail/orderdetail"
+  ],
+  "window": {
+    "navigationStyle": "custom",
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#f0145a"
+  },
+  "tabBar": {  
+    "color": "#333",  
+    "selectedColor": "#E12625",  
+    "borderStyle": "black" ,
+    "list": [{  
+      "selectedIconPath": "images/tabBar/shouye1.png",  
+      "iconPath": "images/tabBar/shouye0.png",  
+      "pagePath": "pages/index/index",  
+      "text": "首页"  
+    }, {  
+      "selectedIconPath": "images/tabBar/fenlei1.png",  
+      "iconPath": "images/tabBar/fenlei0.png",  
+      "pagePath": "pages/index/index",  
+      "text": "分类"  
+    },{  
+      "selectedIconPath": "images/tabBar/faxian1.png",  
+      "iconPath": "images/tabBar/faxian0.png",  
+      "pagePath": "pages/index/index",  
+      "text": "发现"  
+    },{  
+      "selectedIconPath": "images/tabBar/gouwuche1.png",  
+      "iconPath": "images/tabBar/gouwuche0.png",  
+      "pagePath": "pages/index/index",  
+      "text": "购物车"  
+    },{  
+      "selectedIconPath": "images/tabBar/wode1.png",  
+      "iconPath": "images/tabBar/wode0.png",  
+      "pagePath": "pages/user/index/index",  
+      "text": "我的"  
+    }]
+  },
+  "sitemapLocation": "sitemap.json"
+}

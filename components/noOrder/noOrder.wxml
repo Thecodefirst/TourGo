@@ -1,0 +1,10 @@
+<view class="order-page_box-content">
+    <view class="order-page_box-content-empty">
+        <view class="order-page_box-content-empty-icon">
+            <image class="taro-img" src="https://img.gojoy.cn/h5/assets/order/icon-empty.png"/>
+        </view>
+        <text>您还没有相关的订单</text>
+        <text class="taro-text order-page_box-content-empty-subtxt">快去逛逛吧</text>
+    </view>
+</view>
+  

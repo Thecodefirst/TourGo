@@ -1,0 +1,126 @@
+@import '../../../style/common.wxss';
+@import '../../../style/iconfont.wxss';
+page {
+    height: 100%;
+}
+.order-detail_box {
+    position: relative;
+    height: 100%;
+    background-color: #f1f1f1;
+}
+.order-detail-banner {
+    position: relative;
+    height: 160rpx;
+    display: flex;
+    align-items: center;
+}
+.order-detail-banner-img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+.order-detail-banner-title {
+    position: relative;
+    z-index: 1;
+    color: rgb(255, 255, 255);
+    padding-left: 60rpx;
+}
+.order-detail-banner-title-text {
+    display: block;
+    font-size: 34rpx;
+    line-height: 40rpx;
+}
+/* 今日推荐 */
+.rmd-today {
+    position: relative;
+    margin: 20rpx;
+}
+.rmd-today .rmd-today-title {
+    margin: 20rpx auto;
+    width: 333rpx;
+    height: 42rpx;
+}
+.rmd-today image {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+.order-detail-address {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 20rpx;
+    padding: 50rpx;
+}
+.order-detail-address-img {
+    width: 64rpx;
+    height: 64rpx;
+    margin-right: 20rpx;
+}
+.order-detail-address-right {
+    font-size: 28rpx;
+    flex: 1 1 0%;
+}
+.order-detail-address-right-top {
+    margin-bottom: 14rpx;
+    line-height: 40rpx;
+}
+.order-detail-address-right-top .name {
+    margin-right: 20rpx;
+}
+.order-detail-address-right-top .mobile {
+    font-size: 26rpx;
+    color: rgb(127, 127, 127);
+}
+.orderCardsFather {
+    margin-bottom: 20rpx;
+    padding: 0 20rpx;
+    background-color: #fff;
+    overflow: hidden;
+}
+.order-detail-info {
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 20rpx;
+    padding: 30rpx 20rpx;
+}
+.order-detail-info-title {
+    font-size: 28rpx;
+    color: rgb(51, 51, 51);
+    padding-left: 20rpx;
+    border-left: 6rpx solid rgb(249, 86, 96);
+}
+.order-detail-info-content {
+    padding-top: 20rpx;
+}
+.order-detail-info-content-item {
+    display: flex;
+    align-items: center;
+    color: rgb(114, 114, 114);
+    padding: 0px 26rpx;
+}
+.order-detail-info-content-item .left {
+    font-size: 26rpx;
+    line-height: 50rpx;
+}
+.order-detail-info-content-item .left-name {
+    display: inline-block;
+    width: 208rpx;
+}
+.order-detail-info-content-item .right-btn {
+    font-size: 27rpx;
+    background-color: rgb(249, 86, 96);
+    color: rgb(255, 255, 255);
+    padding: 8rpx 10rpx;
+    border-radius: 6rpx;
+}
+.order-detail-info-content-item .right {
+    display: flex;
+    align-items: center;
+}
+.order-detail-info-content-item, .order-detail-logistics {
+    justify-content: space-between;
+}

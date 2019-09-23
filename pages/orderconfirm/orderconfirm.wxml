@@ -1,0 +1,92 @@
+<view class="order-confirm">
+    <view class="page-order-confirm">
+        <view bindtap="sureAddress" class="order-address">
+            <view class="order-address-show">
+                <view class="order-address-show-top">
+                    <view class="order-address-show-top-left">
+                        <view class="order-address-show-top-left-text">{{address.province}} {{address.city}}</view>
+                        <view class="li-title" style="font-size: 34rpx; font-weight: 600; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2;">{{address.addressDetail}}</view>
+                        <view class="order-address-show-top-left-text">{{address.receiver}} {{address.mobile}}</view>
+                    </view>
+                    <view class="order-address-show-top-right">
+                        <text class="iconfont iconjiantouyou" style="color: rgb(34, 34, 34); font-size: 30rpx"></text>
+                    </view>
+                </view>
+            </view>
+        </view>
+        
+        <view class="order-confirm-bottom">
+            <view class="order-confirm-bottom-row">
+                <view class="order-confirm-bottom-row-icon">
+                    <image class="taro-img" src="https://img.gojoy.cn/h5/assets/order/jifen@2x.png" />
+                </view>
+                <text class="taro-text order-confirm-bottom-row-name">预计获得积分：</text>
+                <text class="taro-text order-confirm-bottom-row-num">{{orderObject.preIntegration}}</text>
+            </view>
+        </view>
+        <view wx:for="{{orderObject.productList}}" wx:for-index="index" wx:for-item="item"  wx:key="{{index}}">
+            <view class="confirm_item">
+                <text class="confirm_item-title">{{item.storeName}}</text>
+                <view wx:for="{{item.list}}" wx:for-index="indexChild" wx:key="keyChild" wx:for-item="itemChild" wx:for-key="keyChild" class="confirm_item-detail">
+                    <view class="confirm_item-detail-item">
+                        <view class="confirm_item-detail-item-img">
+                            <image class="taro-img" src="{{itemChild.productImage}}" />
+                        </view>
+                        <view class="confirm_item-detail-item-right">
+                            <view class="li-title" style="color: rgb(34, 34, 34); font-size: 30rpx; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 1;">{{itemChild.productName}}</view>
+                            <view class="confirm_item-detail-item-right-color">{{itemChild.productSaleValueName}}</view>
+                            <view class="confirm_item-detail-item-right-price">
+                                <text class="taro-text num">￥{{itemChild.productPrice}}</text>
+                                <text class="taro-text num">x{{itemChild.productBuyNum}}</text>
+                            </view>
+                            <view class="labels">
+                                <view class="labels-item labels-allow">支持7天退换</view>
+                            </view>
+                        </view>  
+                    </view>
+                </view>
+                <view class="confirm_item-note">
+                    <text class="taro-text">配送方式</text>
+                    <view class="" hover-class="none" hover-stop-propagation="false">
+                        快递：
+                        <text class="taro-text num">¥0.00</text>
+                    </view>
+                </view>
+                <view class="confirm_item-note">
+                    <text class="taro-text">配送方式</text>
+                    <input class="weui-input" value="{{orderNote}}" bindinput="bindKeyInput"  placeholder="请输入备注" type="text" />
+                </view>
+                <view class="confirm_item-note total">
+                    <text class="taro-text total-num">共{{item.list.length}}件</text>
+                    <view class="total-price">小计：<text class="taro-text num">¥{{item.smallTotalAmount}}</text></view>
+                </view>
+            </view>
+            <view class="confirm_detail">
+                <view class="confirm_detail-box">
+                    <view class="confirm_detail-box-item">
+                        <text class="taro-text confirm_detail-box-item-text">商品金额</text>
+                        <text class="taro-text num">¥{{orderObject.productAmount}}</text>
+                    </view>
+                    <view class="confirm_detail-box-item">
+                        <text class="taro-text confirm_detail-box-item-text">运费</text>
+                        <text class="taro-text num">+ ¥0.00</text>
+                    </view>
+                    <view class="confirm_detail-box-item">
+                        <text class="taro-text confirm_detail-box-item-text">代金券抵扣</text>
+                        <text class="taro-text num confirm_detail-box-item-num">- ¥0.00</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+        
+    </view>
+    <view class="confirm_bar">
+        <view class="confirm_bar-box">
+            <view class="confirm_bar-box-left">
+                <text class="taro-text confirm_bar-box-left-text">实付款</text>
+                <text class="taro-text num">¥ {{orderObject.productAmount}}</text>
+            </view>
+            <view bindtap="submitOrder" class="confirm_bar-box-right">提交订单</view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,3 @@
+<view bindtap="goTop" wx:if="{{backTop}}" class="back-top">
+    <image src="https://img.gojoy.cn/h5/assets/components/back-top.png" />
+</view>

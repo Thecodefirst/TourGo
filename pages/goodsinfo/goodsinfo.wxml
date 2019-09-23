@@ -1,0 +1,305 @@
+<view class="goods-info">
+  <view class="top-nav {{ backTop ? 'top-nav-real' : '' }}">
+    <view bindtap="goShopBack" class="top-nav-transparent_btn">
+      <image wx:if="{{!backTop}}" src="https://img.gojoy.cn/h5/assets/goods-info/nav-transparent-back.png" />
+      <image wx:else src="https://img.gojoy.cn/h5/assets/goods-info/nav-transparent-back-no.png" />
+    </view>
+    <view class="li-tabs_title" wx:if="{{backTop}}">
+      <view class="li-tabs_title-child">商品详情</view>
+    </view>
+    <view class="top-nav-transparent_btn"></view>
+  </view>
+  <view class="li-tabs_body">
+    <view class="goods-swiper">
+      <swiper
+        class="swiper-father"
+        circular="{{circular}}"
+        indicator-active-color="#FA425C"
+        indicator-color="rgba(216,216,216,.3)"
+        indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}" 
+        interval="{{interval}}" 
+        duration="{{duration}}">
+        <block wx:for="{{productData.imageList}}" wx:key="{{index}}">
+          <swiper-item>
+            <view class="swiper-image">
+              <image src="{{item.path}}" class="slide-image"/> 
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <view class="basic">
+      <view class="basic-head">
+        <view class="basic-head-price">
+          <view class="basic-head-price-item">
+            <view class="price" style="font-size: 50rpx; font-weight: 500;">
+              <text class="taro-text price-type" style="font-size: 24rpx;">￥</text>
+              <text class="taro-text price-money">481.30</text> 
+            </view>
+            <view class="basic-head-price-item-vipprice">
+              <view class="price" style="color: rgb(0, 0, 0); font-size: 30rpx; font-weight: 500;">
+                <text class="taro-text price-type"></text>
+                <text class="taro-text price-money">195.50</text>
+              </view>
+              <view class="basic-head-price-item-vipprice-badge">
+                <image class="taro-img" src="https://img.gojoy.cn/h5/assets/goods-info/badge-price-vip-small.png" />
+              </view>
+            </view>
+          </view>
+          <view class="basic-head-price-orgin">
+            <text>市场价</text>
+            <view class="price disabled" style="font-size: 24rpx; font-weight: 500;">
+              <text class="price-type">￥</text>
+              <text class="price-money">2,099.00</text>
+            </view>
+          </view>
+        </view>
+        <!--  -->
+        <view class="basic-head-func">
+          <view class="basic-head-func-item">
+            <text class="iconfont iconjindian" style="color: rgb(0, 0, 0); font-size: 40rpx"></text>
+          </view>
+          <view class="basic-head-func-item">
+            <text class="iconfont iconfenxiang" style="color: rgb(0, 0, 0); font-size: 40rpx"></text>
+          </view>
+        </view>
+        <!--  -->
+      </view>
+    <view class="basic-title">
+        <view class="li-title" style="font-size: 32rpx; font-weight: bold; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2;">{{productData.product.name}}</view>
+    </view>
+    </view>
+    <view bindtap="openClauseDialog" class="goods-clause">
+        <view class="goods-clause-item-left">
+          <view>
+            <image src="https://img.gojoy.cn/h5/assets/goods-info/icon-yes.png" />
+            <text>源头好货</text>
+          </view>
+          <view>
+            <image src="https://img.gojoy.cn/h5/assets/goods-info/icon-yes.png" />
+            <text>正品保证</text>
+          </view>
+          <view>
+            <image src="https://img.gojoy.cn/h5/assets/goods-info/icon-yes.png" />
+            <text>七天退换</text>
+          </view>
+        </view>
+        <view class="goods-clause-item-right">
+          <image src="https://img.gojoy.cn/h5/assets/goods-info/icon-right.png" />
+        </view> 
+    </view>
+    <view class="act">
+      <view bindtap="openAddSkuDialog" class="act-item">
+        <text class="act-item-label">已选</text>
+        <view class="act-item-body">
+          <view class="act-item-body-content">
+            <text class="li-title" style="display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 1;line-height: 1;">{{skuSelected.productSaleValueName}}</text>
+          </view>
+          <text class="iconfont icongengduo" style="color: rgb(102, 102, 102); font-size: 30rpx;"></text>
+        </view>
+      </view>
+      <view bindtap="{{ loginState ? 'openAddressDialog' : 'routerLogin' }}" class="act-item">
+        <text class="act-item-label">送至</text>
+        <view class="act-item-body">
+          <view class="act-item-body-content">
+            <text class="taro-text iconfont icondizhi" style="color: rgb(186, 36, 27); font-size: 36rpx"></text>
+            <text wx:if="{{loginState}}" class="li-title" style="display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 1;line-height: 1;">{{addressText}}</text>
+            <text wx:else class="li-title" style="display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 1;line-height: 1;">登录选择配送地址</text>
+          </view>
+          <text class="iconfont icongengduo" style="color: rgb(102, 102, 102); font-size: 30rpx;"></text>
+        </view>
+      </view>
+    </view>
+    <view class="goods-shop">
+      <view class="goods-shop-head">
+        <view class="goods-shop-head-left">
+          <view class="avatar">
+            <image src="https://img.gojoy.cn/gmall/images/20190621/FrHMAjrGe_AeTkM2NY85zsrGnzYp.jpg" />
+          </view>
+          <view class="goods-shop-head-left-name">
+            <view class="goods-shop-head-left-name-text">{{productData.product.storeName}}</view>
+            <view class="goods-shop-head-left-name-star">
+              <text>店铺等级</text>
+              <view></view>
+            </view>
+          </view>
+        </view>
+        <view class="goods-shop-head-btn">
+            <view class="goods-shop-head-btn-entity">进店逛逛</view>
+        </view>
+      </view>
+      <view class="goods-shop-goods"></view>
+    </view>
+    <view class="goods-info-detail">
+      <view class="detail-title"><text class="taro-text detail-title-text">图文详情</text></view>
+      <view class="goods-detail">
+          <rich-text class="goods-detail-content" nodes="{{productData.product.introduction}}"></rich-text>
+      </view>
+    </view>
+    <view class="bottom-bar"></view>
+  </view>
+  <!-- address-dialog -->
+  <view class="weui-demo-dialog {{addressDialog ? 'weui-demo-dialog_show' : ''}}">
+    <view class="weui-mask" bindtap="closeAddressDialog"></view>
+    <view class="weui-half-screen-dialog" catchtap="stopEvent">
+      <view class="weui-half-screen-dialog__hd">
+        <view class="weui-half-screen-dialog__hd__side">
+          <view bindtap="closeAddressDialog" class="weui-icon-btn weui-icon-btn_close">关闭</view>
+        </view>
+        <view class="weui-half-screen-dialog__hd__main">
+          <text class="weui-half-screen-dialog__title">选择地址</text>
+        </view>
+      </view>
+      <view class="weui-half-screen-dialog__bd">
+        <view bindtap="chooseAddress" data-item="{{item}}" data-index="{{index}}" wx:for="{{addressList}}" wx:key="{{index}}" class="address-item">
+          <view class="address-item-title {{ addressIndex == index ? 'address-default' : '' }}">
+            <text>{{item.receiver}}</text>
+            <text wx:if="{{item.isDefault}}">默认</text>
+          </view>
+          <view class="address-item-content">
+            <text class="address-item-content-text">{{item.province}}{{item.city}}{{item.addressDetail}}</text>
+            <view wx:if="{{ addressIndex == index }}" class="address-active-img">
+              <image src="https://img.gojoy.cn/h5/assets/components/address-active.png" />
+            </view>
+          </view> 
+        </view>
+      </view>
+      <view class="weui-half-screen-dialog__ft">
+          <view bindtap="otherAddress" class="sureClauseDialog">选择其他地址</view>
+      </view>
+    </view>
+  </view>
+  <!-- clause-dialog -->
+  <view class="weui-demo-dialog {{clauseDialog ? 'weui-demo-dialog_show' : ''}}">
+    <view class="weui-mask" bindtap="closeClauseDialog"></view>
+    <view class="weui-half-screen-dialog" catchtap="stopEvent">
+      <view class="weui-half-screen-dialog__hd">
+        <view class="weui-half-screen-dialog__hd__side">
+          <view bindtap="closeClauseDialog" class="weui-icon-btn weui-icon-btn_close">关闭</view>
+        </view>
+        <view class="weui-half-screen-dialog__hd__main">
+          <text class="weui-half-screen-dialog__title">服务说明</text>
+        </view>
+      </view>
+      <view class="weui-half-screen-dialog__bd">
+        <view class="li-goods-clause-item">
+          <view class="taro-img">
+            <image src="https://img.gojoy.cn/h5/assets/goods-info/icon-fahuo.png" />
+          </view>
+          <view class="li-goods-clause-item-right">
+            <view>关于发货&售后</view>
+            <view>GOJOY所有商品均由供应商发货并提供售后服务</view>
+          </view> 
+        </view>
+        <view class="li-goods-clause-item">
+          <view class="taro-img">
+            <image src="https://img.gojoy.cn/h5/assets/goods-info/icon-tuikuan.png" />
+          </view>
+          <view class="li-goods-clause-item-right">
+            <view>7天无理由退货</view>
+            <view>支持7天无理由退货</view>
+          </view> 
+        </view>
+        <view class="li-goods-clause-item">
+          <view class="taro-img">
+            <image src="https://img.gojoy.cn/h5/assets/goods-info/icon-zhengpin.png" />
+          </view>
+          <view class="li-goods-clause-item-right">
+            <view>正品保证</view>
+            <view>本平台商品均由正规供应商提供，产品可追溯源头</view>
+          </view> 
+        </view>
+      </view>
+      <view class="weui-half-screen-dialog__ft">
+          <view bindtap="closeClauseDialog" class="sureClauseDialog">确定</view>
+      </view>
+    </view>
+  </view>
+   <!-- sku-dialog -->
+  <view class="weui-demo-dialog {{skuDialog ? 'weui-demo-dialog_show' : ''}}">
+    <view class="weui-mask" bindtap="closeSkuDialog"></view>
+    <view class="weui-half-screen-dialog" catchtap="stopEvent">
+      <view class="weui-half-screen-dialog__bd">
+        <view class="li-sku-body-top">
+          <view class="taro-img">
+            <image src="{{skuSelected.skuImageUrl}}" />
+          </view>
+          <view class="li-sku-body-top-selected">
+            <view class="li-sku-body-top-selected-price">
+              <text>￥</text>
+              <text>{{skuSelected.sellPrice}}</text> 
+            </view>
+            <view class="li-sku-body-top-selected-stock">
+              <text>库存{{skuSelected.inventory}}件</text>
+            </view>
+            <view class="li-sku-body-top-selected-goods">
+              <text>已选{{skuSelected.productSaleValueName}}</text>
+            </view>
+          </view>
+        </view>
+        <view wx:for="{{skuSize}}" wx:for-index="index" wx:key="{{index}}" class="li-sku-body-center">
+          <view class="li-sku-body-item-lable">
+            <text class="li-sku-body-item-lable-text">{{item.saleName}}</text>
+          </view>
+          <view class="li-sku-body-item-radio">
+            <view 
+              wx:for="{{item.saleList}}"
+              wx:key="{{indexChild}}"
+              wx:for-index="indexChild"
+              wx:for-item="itemChild"
+              data-index="{{index}}"
+              data-itemchild="{{itemChild}}"
+              bindtap="skuSizeClick"
+              class="li-sku-body-item-radio-item {{ skuSizeChild[index] == itemChild.saleValueId ? 'radio-btn_active' : '' }}">
+              <text>{{itemChild.saleValue}}{{itemChild.saleValueId}}</text>
+            </view>
+          </view>
+        </view>
+        <view class="li-sku-body-item-bottom">
+          <text class="li-sku-body-item-bottom-text">购买数量</text>
+          <view class="li-sku-body-item-bottom-number">
+            <view bindtap="bindKeyBtn" data-index="0" class="at-input-number__btn">
+              <text class="at-icon">-</text>
+            </view>
+            <input class="weui-input at-input-number__input" value="{{goodsNumber}}" adjust-position bindinput="bindKeyInput" type="number" />
+            <view bindtap="bindKeyBtn" data-index="1" class="at-input-number__btn">
+              <text class="at-icon">+</text>
+            </view>
+          </view> 
+        </view> 
+      </view>
+      <view class="weui-half-screen-dialog__ft">
+          <view bindtap="{{ skuAddBuy ? 'sureSkuDialog' : 'sureAddSkuDialog' }}" class="sureClauseDialog">确定</view>
+      </view>
+    </view>
+  </view>
+  <!-- bottom-bar -->
+  <view class="bar adus-demo-bottom {{ clauseDialog || skuDialog || addressDialog ? 'adus-demo-dialog' : 'adus-demo-dialog_show' }}">
+    <view class="bar-btns">
+      <view class="bar-btns-item">
+        <view class="bar-btns-item-row">
+          <text class="iconfont iconkefu" style="color: rgb(34, 34, 34); font-size: 40rpx"></text>
+        </view>
+        <text class="bar-btns-item-row">客服</text>
+      </view>
+      <view class="bar-btns-item">
+        <view class="bar-btns-item-row">
+          <text class="iconfont iconshoucang" style="color: rgb(34, 34, 34); font-size: 40rpx"></text>
+        </view>
+        <text class="bar-btns-item-row">收藏</text>
+      </view>
+      <view class="bar-btns-item">
+        <view class="bar-btns-item-row">
+          <text class="iconfont icongouwuche" style="color: rgb(34, 34, 34); font-size: 40rpx"></text>
+        </view>
+        <text class="bar-btns-item-row">购物车</text>
+      </view>
+    </view>
+    <view bindtap="{{ loginState ? 'openAddSkuDialog' : 'routerLogin' }}" class="bar-item bar-cart">加入购物车</view>
+    <view bindtap="{{ loginState ? 'openSkuDialog' : 'routerLogin' }}" class="bar-item bar-buy">立即购买</view>
+  </view>
+  <!-- back-top -->
+  <goTop backTop="{{backTop}}"></goTop>
+  <!-- dialog -->
+</view>

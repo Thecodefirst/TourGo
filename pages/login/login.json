@@ -1,0 +1,8 @@
+{
+  "navigationStyle": "default",
+  "navigationBarBackgroundColor": "#f1f1f1",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "微信登录",
+  
+  "usingComponents": {}
+}

@@ -1,0 +1,215 @@
+@import '../../../style/common.wxss';
+@import '../../../style/iconfont.wxss';
+page {
+    height: 100%;
+}
+.page-address {
+    height: 100%;
+    background-color: #f1f1f1;
+}
+.page-address-scroll {
+    padding-bottom: 100rpx;
+}
+.page-user1-body {
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.user {
+    display: flex;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    padding: 0 .64rem 1.32267rem;
+}
+.user-wrapper, .user-wrapper-info, .user-wrapper-info-name {
+    display: flex;
+}
+.user-wrapper {
+    flex: 1;
+}
+.avatar {
+    position: relative;
+    display: inline-block;
+}
+.avatar-img {
+    width: 100%;
+    height: 100%!important;
+    left: 0;
+}
+.user-wrapper-info {
+    flex-wrap: wrap;
+    align-content: space-around;
+    margin-left: 20rpx;
+    flex: 1;
+    height: 108rpx;
+}
+.user-wrapper-info-name {
+    align-items: center;
+    width: 100%;
+    align-self: center;
+}
+.user-wrapper, .user-wrapper-info, .user-wrapper-info-name {
+    display: flex;
+}
+.user-wrapper-info-name-text {
+    color: #222;
+    font-size: 40rpx;
+    line-height: 56rpx;
+    font-weight: 600;
+}
+.user-wrapper-info-name-vip {
+    width: 150rpx;
+    height: 42rpx;
+    margin-left: 10rpx;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.user-wrapper-info-creat {
+    height: 42rpx;
+    line-height: 42rpx;
+    padding: 0 10rpx;
+    margin-top: 10rpx;
+    color: #666;
+    font-size: 24rpx;
+    text-align: center;
+    background: #ddd;
+    border-radius: 10rpx;
+}
+.my-order {
+    padding: 0 20rpx;
+    margin-bottom: 20rpx;
+}
+.my-order-wrapper {
+    position: relative;
+    padding: 40rpx 30rpx;
+    border-radius: 20rpx;
+    background: #fff;
+}
+.my-order-wrapper-top {
+    display: flex;
+    justify-content: space-between;
+}
+.my-order-wrapper-top-title {
+    color: #222;
+    font-size: 34rpx;
+    line-height: 50rpx;
+    font-weight: 600;
+}
+.my-order-wrapper-top-all {
+    display: flex;
+    align-items: center;
+}
+.my-order-wrapper-top-all-text {
+    color: #666;
+    font-size: 28rpx;
+    line-height: 50rpx;
+    margin-right: 10rpx;
+}
+.my-order-all-image {
+    width: 24rpx;
+    height: 24rpx;
+}
+.my-order-wrapper-middle {
+    padding: 60rpx 0 20rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.my-order-wrapper-middle-list {
+    position: relative;
+    text-align: center;
+}
+.my-order-wrapper-middle-list-icon {
+    margin: 0 auto;
+    width: 54rpx;
+    height: 50rpx;
+    text-align: center;
+}
+.my-order-wrapper-middle-list-text {
+    display: block;
+    color: #666;
+    font-size: 24rpx;
+    padding-top: 24rpx;
+}
+.my-order-wrapper-line {
+    width: 100%;
+    height: 1rpx;
+    position: absolute;
+    top: 280rpx;
+    left: 0;
+    background: #f2f2f2;
+}
+.my-order-wrapper-bottom {
+    padding: 50rpx 0 0;
+    display: flex;
+    justify-content: space-between;
+}
+.my-order-wrapper-bottom-list {
+    width: 160rpx;
+    text-align: center;
+}
+.my-order-wrapper-bottom-list text {
+    display: block;
+}
+.my-order-wrapper-bottom-line {
+    width: 2rpx;
+    height: 54rpx;
+    margin-top: 24rpx;
+    background: #ddd;
+}
+.my-order-wrapper-bottom-list-number {
+    color: #222;
+    font-size: 42rpx;
+    line-height: 56rpx;
+    font-weight: 600;
+}
+.my-order-wrapper-bottom-list-text {
+    color: #666;
+    font-size: 24rpx;
+    line-height: 32rpx;
+}
+
+.my-serve {
+    padding: 0 20rpx;
+    margin-bottom: 20rpx;
+}
+.my-serve-wrapper {
+    position: relative;
+    padding: 40rpx 30rpx;
+    border-radius: 20rpx;
+    background: #fff;
+}
+.my-serve-wrapper-top {
+    display: flex;
+    justify-content: space-between;
+}
+.my-serve-wrapper-top-title {
+    color: #222;
+    font-size: 34rpx;
+    line-height: 50rpx;
+    font-weight: 600;
+}
+.my-serve-wrapper-middle {
+    padding: 60rpx 0 20rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.my-serve-wrapper-middle-list {
+    position: relative;
+    text-align: center;
+}
+.my-serve-wrapper-middle-list-icon {
+    margin: 0 auto;
+    width: 54rpx;
+    height: 50rpx;
+    text-align: center;
+}
+.my-serve-wrapper-middle-list-text {
+    display: block;
+    color: #666;
+    font-size: 24rpx;
+    padding-top: 24rpx;
+}

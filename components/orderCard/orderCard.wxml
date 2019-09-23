@@ -1,0 +1,60 @@
+<view class="orders-item">
+    <view class="orders-item-box">
+        <view class="orders-item-box-title">
+            <view class="orders-item-box-title-name">
+                <text class="taro-text orders-item-box-title-name-text">TourGo</text>
+                <text class="iconfont iconjiantouyou" style="color: rgb(204, 204, 204); font-size: 24rpx"></text>
+            </view>
+            <text class="taro-text orders-item-box-title-text">{{orderState()}}</text>
+        </view>
+        <view class="orders-item-box-list">
+            <view class="order-goods-item">
+                <view class="order-goods-item-box">
+                    <view class="order-goods-item-img">
+                        <image class="taro-img" src="{{dataList.productImage}}"/>
+                    </view>
+                    <view class="order-goods-item-info">
+                        <view class="order-goods-item-info-top">
+                            <view class="goods-name">
+                                <view class="li-elip" style="font-size: 26rpx; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2;">
+                                    <text class="taro-text li-elip-text" style="font-weight: 400;">{{dataList.productName}}</text>
+                                </view>
+                            </view>
+                            <view class="goods-price">
+                                <view class="price" style="color: rgb(51, 51, 51); font-size: 30rpx; font-weight: 500;">
+                                    <text class="taro-text price-type" style="font-size: 20rpx">￥</text>
+                                    <text class="taro-text price-money">{{dataList.productPrice}}</text>
+                                </view>
+                                <text class="taro-text goods-num">x1</text>
+                            </view>
+                        </view>
+                        <view class="order-goods-item-info-spec">
+                            <text class="taro-text">{{dataList.productSpec}}</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view></view>
+        </view>
+        <view class="orders-item-box-bottom">
+            <view class="orders-item-box-bottom-price">
+                <text class="taro-text">共{{dataList.productBuyNum}}件商品</text>
+                <text class="taro-text">运费：</text>
+                <view class="price" style="color: rgb(51, 51, 51); font-size: 24rpx; font-weight: 500;">
+                    <text class="taro-text price-type" style="font-size: 24rpx;">￥</text>
+                    <text class="taro-text price-money">0.00</text>
+                </view>
+                <text class="taro-text orders-item-box-bottom-total">合计：</text>
+                <view class="price" style="color: rgb(51, 51, 51); font-size: 30rpx; font-weight: 500;">
+                    <text class="taro-text price-type" style="font-size: 24rpx;">￥</text>
+                    <text class="taro-text price-money">{{dataList.payAmount}}</text>
+                </view>
+            </view>
+            <view class="orders-item-box-bottom-integral"><text class="taro-text">预计可获得积分：1.44366697</text></view>
+        </view>
+    </view>
+    <view class="orders-item-box-bottom-btns">
+        <view class="orders-item-box-bottom-btns-gray">删除订单</view>
+        <view class="orders-item-box-bottom-btns-gray">付款</view>
+    </view>
+</view>

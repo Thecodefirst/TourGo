@@ -1,0 +1,84 @@
+<view class="myOrders">
+    <view class="li-tabs_title-box">
+        <scroll-view scroll-with-animation="true" scroll-x="true" class='taro-scroll-view__scroll-x'>
+            <block wx:for="{{bottomTab}}">
+                <view bindtap="rcbBottomTab" data-index="{{index}}" class="li-tabs_title-item {{activeTab == index ? 'li-tabs_title-item-active' : ''}}" style="color: rgb(34, 34, 34);">
+                    {{item}}
+                    <view class="li-tabs_title-item-line" style="background-color: rgb(186, 36, 27); width: 100%"></view>
+                </view>
+            </block>
+        </scroll-view>
+    </view>
+    <swiper skip-hidden-item-layout="true" class="swiperList" circular='true' duration="300" bindchange='swiperChange' current='{{activeTab}}'>
+        <swiper-item>
+            <scroll-view class="scrollView" scroll-y>
+                <view style="padding: 20rpx">
+                    <view wx:for="{{todayList.list}}" class="orderCardsFather"><orderCard dataList="{{item}}"></orderCard></view>
+                    <noOrder></noOrder>
+                    <view class="rmd-today">
+                        <view class="rmd-today-title">
+                            <image src="https://img.gojoy.cn/h5/assets/home/line.png"></image>
+                        </view>
+                        <shopCard bindincrement="navigatorGoodsInfo" dataList="{{todayList.list}}"></shopCard>
+                    </view>
+                </view>
+            </scroll-view>
+        </swiper-item>
+        <swiper-item>
+            <scroll-view style="height:100%;" scroll-y>
+                <noOrder></noOrder>
+                <view class="rmd-today">
+                    <view class="rmd-today-title">
+                        <image src="https://img.gojoy.cn/h5/assets/home/line.png"></image>
+                    </view>
+                    <shopCard bindincrement="navigatorGoodsInfo" dataList="{{todayList.list}}"></shopCard>
+                </view>
+            </scroll-view>
+        </swiper-item>
+        <swiper-item>
+            <scroll-view style="height:100%;" scroll-y>
+                <noOrder></noOrder>
+                <view class="rmd-today">
+                    <view class="rmd-today-title">
+                        <image src="https://img.gojoy.cn/h5/assets/home/line.png"></image>
+                    </view>
+                    <shopCard bindincrement="navigatorGoodsInfo" dataList="{{todayList.list}}"></shopCard>
+                </view>
+            </scroll-view>
+        </swiper-item>
+        <swiper-item>
+            <scroll-view style="height:100%;" scroll-y>
+                <noOrder></noOrder>
+                <view class="rmd-today">
+                    <view class="rmd-today-title">
+                        <image src="https://img.gojoy.cn/h5/assets/home/line.png"></image>
+                    </view>
+                    <shopCard bindincrement="navigatorGoodsInfo" dataList="{{todayList.list}}"></shopCard>
+                </view>
+            </scroll-view>
+        </swiper-item>
+        <swiper-item>
+            <scroll-view style="height:100%;" scroll-y>
+                <noOrder></noOrder>
+                <view class="rmd-today">
+                    <view class="rmd-today-title">
+                        <image src="https://img.gojoy.cn/h5/assets/home/line.png"></image>
+                    </view>
+                    <shopCard bindincrement="navigatorGoodsInfo" dataList="{{todayList.list}}"></shopCard>
+                </view>
+            </scroll-view>
+        </swiper-item>
+        <swiper-item>
+            <scroll-view style="height:100%;" scroll-y>
+                <noOrder></noOrder>
+                <view class="rmd-today">
+                    <view class="rmd-today-title">
+                        <image src="https://img.gojoy.cn/h5/assets/home/line.png"></image>
+                    </view>
+                    <shopCard bindincrement="navigatorGoodsInfo" dataList="{{todayList.list}}"></shopCard>
+                </view>
+            </scroll-view>
+        </swiper-item>
+    </swiper>
+</view>
+  

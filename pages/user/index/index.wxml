@@ -1,0 +1,115 @@
+<view class="page-address">
+    <view class="page-address-scroll">
+        <view class="page-user1-body">
+            <view class="user">
+                <view class="user-wrapper">
+                    <view class="avatar" style="width: 108rpx; height: 108rpx">
+                        <view class="avatar-img" style="border-radius: 50%; border: 2rpx solid white">
+                            <image class="taro-img" src="https://wx.qlogo.cn/mmopen/vi_32/m06Lict04To9RpV27c47Ge6ej8A005IC5mP0pKxAibEOVGreQB9hMlu7deCYbsicicBz6Cib0wmHU7U34Se8bYSPkqg/132" />
+                        </view>
+                    </view>
+                    <view class="user-wrapper-info">
+                        <view class="user-wrapper-info-name">
+                            <text class="taro-text user-wrapper-info-name-text" style="color: rgb(34, 34, 34)">du2wsyZK</text>
+                            <view class="user-wrapper-info-name-vip" style="background-image: url('')"></view>
+                        </view>
+                        <view class="user-wrapper-info-creat">注册日期：2019-08-30</view>
+                    </view>
+                </view>
+            </view>
+            <view class="my-order">
+                <view class="my-order-wrapper">
+                    <view class="my-order-wrapper-top">
+                        <text class="my-order-wrapper-top-title">我的订单</text>
+                        <view bindtap="goOrders" data-index="0" class="my-order-wrapper-top-all">
+                            <text class="my-order-wrapper-top-all-text">全部</text>
+                            <text class="iconfont iconjiantouyou" style="color: rgb(102, 102, 102); font-size: 28rpx"></text>
+                        </view>
+                    </view>
+                    <view class="my-order-wrapper-middle">
+                        <view bindtap="goOrders" data-index="1" class="my-order-wrapper-middle-list">
+                            <view class="my-order-wrapper-middle-list-icon">
+                                <image class="taro-img" src="https://img.gojoy.cn/h5/assets/user/wait_pay@2x.png" />
+                            </view>
+                            <text class="my-order-wrapper-middle-list-text">待付款</text>
+                        </view>
+                        <view bindtap="goOrders" data-index="2" class="my-order-wrapper-middle-list">
+                            <view class="my-order-wrapper-middle-list-icon">
+                                <image class="taro-img" src="https://img.gojoy.cn/h5/assets/user/wait_hair@2x.png" />
+                            </view>
+                            <text class="my-order-wrapper-middle-list-text">待发货</text>
+                        </view>
+                        <view bindtap="goOrders" data-index="3" class="my-order-wrapper-middle-list">
+                            <view class="my-order-wrapper-middle-list-icon">
+                                <image class="taro-img" src="https://img.gojoy.cn/h5/assets/user/wait_goods@2x.png" />
+                            </view>
+                            <text class="my-order-wrapper-middle-list-text">待收货</text>
+                        </view>
+                        <view bindtap="goOrders" data-index="4" class="my-order-wrapper-middle-list">
+                            <view class="my-order-wrapper-middle-list-icon">
+                                <image class="taro-img" src="https://img.gojoy.cn/h5/assets/user/icon-appraise.png" />
+                            </view>
+                            <text class="my-order-wrapper-middle-list-text">待评价</text>
+                        </view>
+                        <view bindtap="goOrders" data-index="5" class="my-order-wrapper-middle-list">
+                            <view class="my-order-wrapper-middle-list-icon">
+                                <image class="taro-img" src="https://img.gojoy.cn/h5/assets/user/return_goods@2x.png" />
+                            </view>
+                            <text class="my-order-wrapper-middle-list-text">退换货</text>
+                        </view>
+                    </view>
+                    <view class="my-order-wrapper-line"></view>
+                    <view class="my-order-wrapper-bottom">
+                        <view class="my-order-wrapper-bottom-list">
+                            <text class="my-order-wrapper-bottom-list-number">0</text>
+                            <text class="my-order-wrapper-bottom-list-text">收藏夹</text>
+                        </view>
+                        <view class="my-order-wrapper-bottom-line"></view> 
+                        <view class="my-order-wrapper-bottom-list">
+                            <text class="my-order-wrapper-bottom-list-number">0</text>
+                            <text class="my-order-wrapper-bottom-list-text">足迹</text>
+                        </view>
+                        <view class="my-order-wrapper-bottom-line"></view> 
+                        <view class="my-order-wrapper-bottom-list">
+                            <text class="my-order-wrapper-bottom-list-number">0</text>
+                            <text class="my-order-wrapper-bottom-list-text">优惠券</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="my-serve">
+                <view class="my-serve-wrapper">
+                    <view class="my-serve-wrapper-top">
+                        <text class="my-serve-wrapper-top-title">我的服务</text>
+                    </view>
+                    <view class="my-serve-wrapper-middle">
+                        <view class="my-serve-wrapper-middle-list">
+                            <view class="my-serve-wrapper-middle-list-icon">
+                                <text class="iconfont iconlefticon-rules2" style="color: rgb(34, 34, 34); font-size: 56rpx"></text>
+                            </view>
+                            <text class="my-serve-wrapper-middle-list-text">新手指引</text>
+                        </view>
+                        <view class="my-serve-wrapper-middle-list">
+                            <view class="my-serve-wrapper-middle-list-icon">
+                                <text class="iconfont iconjianyifankui" style="color: rgb(34, 34, 34); font-size: 56rpx"></text>
+                            </view>
+                            <text class="my-serve-wrapper-middle-list-text">建议反馈</text>
+                        </view>
+                        <view bindtap="goSettings" class="my-serve-wrapper-middle-list">
+                            <view class="my-serve-wrapper-middle-list-icon">
+                                <text class="iconfont iconshezhi" style="color: rgb(34, 34, 34); font-size: 56rpx"></text>
+                            </view>
+                            <text class="my-serve-wrapper-middle-list-text">设置</text>
+                        </view>
+                        <view class="my-serve-wrapper-middle-list">
+                            <view class="my-serve-wrapper-middle-list-icon">
+                                <text class="iconfont iconkefu" style="color: rgb(34, 34, 34); font-size: 56rpx"></text>
+                            </view>
+                            <text class="my-serve-wrapper-middle-list-text">帮助/客服</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

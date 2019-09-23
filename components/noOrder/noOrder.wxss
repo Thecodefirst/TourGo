@@ -1,0 +1,23 @@
+@import '../../style/common.wxss';
+.order-page_box-content {
+  padding: 20rpx 30rpx;
+}
+.order-page_box-content-empty {
+  text-align: center;
+  padding: 100rpx 10rpx;
+  font-size: 40rpx;
+  font-weight: 300;
+  display: block;
+}
+.order-page_box-content-empty-icon {
+  display: block;
+  margin: auto auto 30rpx;
+  width: 270rpx;
+  height: 236rpx;
+}
+.order-page_box-content-empty-subtxt {
+  padding-top: 30rpx;
+  display: block;
+  font-size: 30rpx;
+  color: #999;
+}

@@ -1,0 +1,126 @@
+.container {
+  position: relative;
+  background-color: #f1f1f1;
+}
+/* home-nav */
+.home-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  /* padding: 55rpx 0 10rpx; */
+  padding-bottom: 10rpx;
+  width: 100%;
+  background-color: transparent;
+  border-color: transparent;
+  transition: all .5s;
+}
+.home-nav-real {
+  border-bottom: 1rpx solid #999;
+  -webkit-box-shadow: 0 1rpx 1rpx rgba(204,204,204,.5);
+  box-shadow: 0 1rpx 1rpx rgba(204,204,204,.5);
+  background-color: #fff;
+  border-color: #f3f3f3;
+}
+.home-nav-real .li-tabs_title-bottom {
+  border-color: #e83628;
+}
+.home-nav-real .li-tabs_title view {
+  color: #e83628;
+}
+.home-nav-real text {
+  color: #999!important;
+}
+.home-top-nav-search {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(247,247,247,.6);
+  border-radius: 50rpx;
+  position: relative;
+  margin-left: 50rpx;
+  padding: 10rpx 20rpx;
+  width: 60%;
+}
+.home-top-nav-search .icon-search {
+  vertical-align: middle;
+  margin-top: 4rpx;
+}
+.home-top-nav-search text {
+  font-size: 27rpx;
+  color: #fff;
+}
+.li-tabs_title {
+  margin-top: 20rpx;
+  display: flex;
+  justify-content: space-around;
+}
+.li-tabs_title view {
+  font-size: 28rpx;
+  color: #fff;
+  line-height: 2;
+}
+.li-tabs_title-bottom {
+  font-weight: 500;
+  border-color: #fff;
+  border-bottom: 6rpx solid;
+}
+/* swiper */
+.swiper-father {
+  width: 750rpx;
+  height: 600rpx;
+}
+.swiper-image {
+  display: inline-block;
+  width: 750rpx;
+  height: 600rpx;
+}
+.swiper-image image {
+  display: inline-block;
+  width: 100%;
+  height: 100%; 
+}
+/* page-home-box-content */
+.page-home-box-content {
+  position: relative;
+  top: -20rpx;
+  width: 100%;
+}
+.page-home-box-content .home-rmd {
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  width: 100%;
+}
+.page-home-box-content .home-rmd-item {
+  border-radius: 10rpx;
+  background-color: #fff;
+  width: 100%;
+  height: auto;
+}
+.page-home-box-content .btns {
+  display: flex;
+  justify-content: space-around;
+  padding: 20rpx 0;
+}
+.page-home-box-content .btns image {
+  display: block;
+  width: 80rpx;
+  height: 80rpx;
+}
+.page-home-box-content .btns text {
+  font-size: 25rpx;
+}
+/* 今日推荐 */
+.rmd-today {
+  position: relative;
+  margin: 20rpx;
+}
+.rmd-today .rmd-today-title {
+  margin: 20rpx auto;
+  width: 333rpx;
+  height: 42rpx;
+}
+.rmd-today image {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}

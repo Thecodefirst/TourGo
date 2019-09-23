@@ -1,0 +1,33 @@
+@import '../../style/common.wxss';
+page {
+    height: 100%;
+}
+.page-address {
+    height: 100%;
+    background-color: #f1f1f1;
+}
+.page-help .bottom-btn {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+.page-help .bottom-btn-text {
+    text-align: center;
+    display: block;
+    color: #fff;
+    line-height: 100rpx;
+    background-color: #d94a55;
+    font-size: 36rpx;
+}
+.list-item {
+    justify-content: space-between;
+    padding: 20rpx;
+    font-size: 30rpx;
+    color: #575757;
+    background-color: #fff;
+    border-bottom: 1rpx solid #f3f3f3;
+}
+.list-item-left-title {
+    flex: 1;
+    line-height: 50rpx;
+}

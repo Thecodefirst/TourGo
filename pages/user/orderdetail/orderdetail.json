@@ -1,0 +1,12 @@
+{
+  "navigationStyle": "default",
+  "navigationBarBackgroundColor": "#f1f1f1",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "订单详情",
+  
+  "usingComponents": {
+    "goTop": "../../components/goTop/goTop",
+    "shopCard": "../../components/shopCard/shopCard",
+    "orderCard": "../../components/orderCard/orderCard"
+  }
+}

@@ -1,0 +1,87 @@
+@import '../../../style/common.wxss';
+page {
+    height: 100%;
+}
+.myOrders {
+    position: relative;
+    height: 100%;
+    background-color: #f1f1f1;
+}
+.swiperList {
+    padding-top: 68rpx;
+    box-sizing: border-box;
+    z-index: 998;
+    background-color: #f1f1f1;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.li-tabs_title-box {
+    z-index: 999;
+    position: fixed;
+    width: 100%;
+    padding: 0 20rpx;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+.taro-scroll-view__scroll-x {
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+.li-tabs_title-item {
+    position: relative;
+    display: inline-block;
+    padding: 20rpx 0;
+    z-index: 998;
+    margin-right: 38rpx;
+    font-size: 28rpx;
+    color: #666;
+    overflow: visible;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.li-tabs_title-item-line {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 4rpx;
+    transition: all .15s;
+    transform: scaleX(0);
+    background-color: #ba241b;
+}
+.li-tabs_title-item-active {
+    color: #ba241b;
+}
+.li-tabs_title-item-active .li-tabs_title-item-line {
+    transform: scaleX(1);
+    width: 100%;
+}
+/* 今日推荐 */
+.rmd-today {
+    position: relative;
+    margin: 20rpx;
+}
+.rmd-today .rmd-today-title {
+    margin: 20rpx auto;
+    width: 333rpx;
+    height: 42rpx;
+}
+.rmd-today image {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+.scrollView {
+    height:100%;
+    box-sizing: border-box;
+}
+.orderCardsFather {
+    margin-bottom: 20rpx;
+    padding: 0 20rpx;
+    background-color: #fff;
+    border-radius: 20rpx;
+    overflow: hidden;
+}

@@ -1,0 +1,6 @@
+{
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "goTop": "../../components/goTop/goTop"
+  }
+}

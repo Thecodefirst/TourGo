@@ -1,0 +1,40 @@
+<view class="page-address">
+    <radio-group class="radio-group" bindchange="radioChange">
+        <view class="page-address-scroll">
+            <view wx:for="{{addressList}}" wx:key="{{index}}" class="my-address-item">
+                <view bindtap="orderAddress" data-id="{{item.id}}">
+                    <view class="my-address-item-consignee">
+                        <text>收货人：{{item.receiver}}</text>
+                        <text>{{item.mobile}}</text>
+                    </view>
+                    <text class="my-address-item-text">{{item.province}}{{item.city}}{{item.addressDetail}}</text>
+                </view>
+                <view class="my-address-item-bottom">
+                    <view class="radio-round">
+                        <radio color="#ba241b" class="radio" value="{{item.id}}" checked="{{item.isDefault}}"></radio>
+                        <text class="radio-round-box">设为默认</text>
+                    </view>
+                    <view class="my-address-item-bottom-right">
+                        <view bindtap="deleteAddress" data-id="{{item.id}}" class="my-address-item-bottom-right-btn">
+                            <view class="taro-img-com delete">
+                                <image src="https://img.gojoy.cn/h5/assets/address/icon-delete.png" />
+                            </view>
+                            <text class="btn-text">删除</text>
+                        </view>
+                        <view class="my-address-item-bottom-right-btn">
+                            <view class="taro-img-com editer">
+                                <image src="https://img.gojoy.cn/h5/assets/address/icon-editer.png" />
+                            </view>
+                            <text bindtap="addressAdd" data-id="{{item.id}}" class="btn-text">编辑</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="page-address-box-btn">
+                <view bindtap="addressAdd" class="li-button">
+                    <text class="li-button-text">新增</text>
+                </view> 
+            </view>
+        </view>
+    </radio-group>
+</view>

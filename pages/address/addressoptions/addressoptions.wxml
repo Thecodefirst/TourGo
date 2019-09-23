@@ -1,0 +1,54 @@
+<view class="page-address">
+    <form bindsubmit="formSubmit">
+        <view class="page-address-scroll">
+            <view class="address-form">
+                <!-- </form> -->
+                <view class="address-form-item">
+                    <text class="address-form-item-label">收货人</text>
+                    <view class="address-form-item-box">
+                        <input name="receiver" placeholder="请输入姓名" value="{{addressOptions.receiver}}" type="text" />
+                    </view>
+                </view>
+                <view class="address-form-item">
+                    <text class="address-form-item-label">联系电话</text>
+                    <view class="address-form-item-box">
+                        <input name="mobile" placeholder="请输入手机号码" value="{{addressOptions.mobile}}" type="number" />
+                    </view>
+                </view>
+                <view class="address-form-item">
+                    <text class="address-form-item-label">所在地区</text>
+                    <view class="address-form-item-box">
+                        <picker bindchange="bindPickerChange" range-key="areaName" value="{{indexProvince}}" range="{{provinceList}}">
+                            <view class="picker">{{provinceList[indexProvince].areaName}}</view>
+                        </picker>
+                    </view>
+                </view>
+                <view class="address-form-item">
+                    <text class="address-form-item-label">市</text>
+                    <view class="address-form-item-box">
+                        <picker bindchange="bindPickerChangeCity"  value="{{indexCity}}" range-key="areaName" range="{{cityList}}">
+                            <view class="picker">{{cityList[indexCity].areaName}}</view>
+                        </picker>
+                    </view>
+                </view>
+                <view class="address-form-item">
+                    <text class="address-form-item-label">详细地址</text>
+                    <view class="address-form-item-box">
+                        <input name="addressDetail" placeholder="请输入详细地址" value="{{addressOptions.addressDetail}}" type="text" />
+                    </view>
+                </view>
+                <view class="address-form-item">
+                    <text class="address-form-item-label">设置为默认</text>
+                    <view class="address-form-item-box">
+                        <switch color="#ba241b" bindchange="bindchangeSwitch" checked="{{addressOptions.isDefault}}"/>
+                    </view>
+                </view>
+            </view>
+            <view class="page-address-box-btn">
+                <view class="li-button">
+                    <button form-type="submit" class="li-button-text">完成</button>
+                </view> 
+            </view>
+        </view>
+    </form>
+</view>

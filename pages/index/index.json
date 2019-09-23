@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "goTop": "../../components/goTop/goTop",
+    "shopCard": "../../components/shopCard/shopCard"
+  }
+}

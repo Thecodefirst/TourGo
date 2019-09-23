@@ -1,0 +1,22 @@
+<view class="page-address">
+    <view class="page-help">
+        <view class="list-item">
+            <text class="taro-text list-item-left-title">个人资料</text>
+        </view>
+        <view bindtap="addressManage" class="list-item">
+            <text class="taro-text list-item-left-title">地址管理</text>
+        </view>
+        <view class="list-item">
+            <text class="taro-text list-item-left-title">账户安全</text>
+        </view>
+        <view class="list-item">
+            <text class="taro-text list-item-left-title">关于我们</text>
+        </view>
+        <view class="list-item">
+            <text class="taro-text list-item-left-title">清除缓存</text>
+        </view>
+        <view bindtap="logoutAccount" class="bottom-btn">
+            <text class="taro-text bottom-btn-text">退出当前账号</text>
+        </view>
+    </view>
+</view>

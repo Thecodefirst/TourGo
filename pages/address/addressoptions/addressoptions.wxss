@@ -1,0 +1,52 @@
+@import '../../../style/common.wxss';
+page {
+    height: 100%;
+}
+.page-address {
+    height: 100%;
+}
+.page-address-scroll {
+    padding-bottom: 100rpx;
+}
+.page-address-box-btn {
+    margin-top: 100rpx;
+}
+.li-button {
+    line-height: 1;
+    margin: 0 auto;
+    width: 80%;
+}
+.li-button-text {
+    text-align: center;
+    display: block;
+    color: #fff;
+    background-color: #ba241b;
+    font-size: 40rpx;
+    line-height: 80rpx;
+    border-radius: 100rpx;
+}
+.address-form {
+    box-sizing: border-box;
+    padding: 0 20rpx 20rpx;
+    background-color: #fff;
+}
+.address-form-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20rpx 0;
+    border-bottom: 2rpx solid #f3f3f3;
+}
+.address-form-item-label {
+    line-height: 1;
+    flex: 1;
+    font-size: 30rpx;
+}
+.address-form-item-box {
+    line-height: 1;
+    width: 500rpx;
+    font-size: 30rpx;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+}

@@ -1,0 +1,53 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- home-nav -->
+  <view style="padding-top: {{ statusBarHeight+'px' }}" class="home-nav {{ backTop ? 'home-nav-real' : '' }}">
+    <view class="home-top-nav-search">
+      <icon class="icon-search" type="search" color="{{ backTop ? '#999' : '#fff' }}" size="15"></icon>
+      <text>请输入关键词搜索</text>
+    </view>
+    <view class="li-tabs_title">
+      <view class="{{ tabsIndex == index ? 'li-tabs_title-bottom ' : '' }}" wx:for="{{tabsList}}" wx:key="{{index}}" bindtap="tabsClick" data-index="{{index}}">{{item}}</view>
+    </view>
+  </view>
+  <swiper
+    class="swiper-father"
+    circular="{{circular}}"
+    indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}" 
+    interval="{{interval}}" 
+    duration="{{duration}}">
+    <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+      <swiper-item>
+        <view class="swiper-image">
+          <image src="{{item.image}}" class="slide-image"/> 
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="page-home-box-content">
+    <view class="home-rmd">
+      <view class="home-rmd-item">
+        <view class="btns">
+          <view wx:for="{{btnsList}}" wx:key="{{index}}">
+            <image src="{{item.image}}"></image>
+            <text>{{item.name}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- 今日推荐 -->
+    <view class="rmd-today">
+      <view class="rmd-today-title">
+        <image src="https://img.gojoy.cn/h5/assets/home/line.png"></image>
+      </view>
+      <shopCard bindincrement="navigatorGoodsInfo" dataList="{{todayList}}"></shopCard>
+      <view wx:if="{{ loadingMore }}" class="weui-loadmore">
+          <view class="weui-loading"></view>
+          <view class="weui-loadmore__tips">加载中</view>
+      </view>
+    </view>
+  </view>
+  <!-- back-top -->
+  <goTop backTop="{{backTop}}"></goTop>
+</view>
