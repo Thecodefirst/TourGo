@@ -7,7 +7,7 @@ const app = getApp()
 create(store, {
   data: {
     // 适配
-    statusBarHeight: store.data.statusBarHeight,
+    statusBar: store.data.statusBar,
     // 搜索
     inputVal: '',
     userInfo: {},

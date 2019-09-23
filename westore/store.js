@@ -4,7 +4,14 @@ export default {
         goodsid: '',
         addressId: '',
         productList:[],
-        statusBarHeight: '',
+        statusBar: {
+          bottom: '',
+          height: '',
+          left: '',
+          right: '',
+          top: '',
+          width: '',
+        },
         loginState: false,//全局登录状态
         token: function() {
             return this.loginState ? wx.getStorageSync('token') : 'adus'
@@ -23,8 +30,9 @@ export default {
     },
     // 适配
     iOS_Android: function () {
-        let res = wx.getSystemInfoSync()
-        this.update({ statusBarHeight: res.statusBarHeight + ( res.system.indexOf('iOS') > -1 ? 6 : 8 )})
+      let res = wx.getMenuButtonBoundingClientRect()
+      console.log(res)
+      this.update({ statusBar: res})
     },
     // 状态检查 => 主动调用
     wx_checkSession: function() {

@@ -1,7 +1,7 @@
 <!--index.wxml-->
 <view class="container">
   <!-- home-nav -->
-  <view style="padding-top: {{ statusBarHeight+'px' }}" class="home-nav {{ backTop ? 'home-nav-real' : '' }}">
+  <view style="padding-top: {{ statusBar.top+'px' }}" class="home-nav {{ backTop ? 'home-nav-real' : '' }}">
     <view class="home-top-nav-search">
       <icon class="icon-search" type="search" color="{{ backTop ? '#999' : '#fff' }}" size="15"></icon>
       <text>请输入关键词搜索</text>
