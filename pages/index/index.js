@@ -63,9 +63,13 @@ create(store, {
   },
   // productList
   productList: function(pageNum, pageSize) {
-    let _this = this
-    post('/product/list',{ pageNum: pageNum, pageSize: pageSize },(res) => {
-      if(res.data.code == "SUCCESS" && res.data.resultCode == "SUCCESS") { _this.setData({ todayList: _this.data.todayList.concat(res.data.response.list), todayRes: _this.data.response, loadingMore: false }) }
+    let _this = this, a = _this.data.todayList.length
+    post('/product/list',{ pageNum: 1, pageSize: pageSize },(res) => {
+      if(res.data.code == "SUCCESS" && res.data.resultCode == "SUCCESS") { 
+        _this.setData({ ['todayList['+a+']']: res.data.response.list, todayRes: _this.data.response, loadingMore: false }, () => {
+          console.log(_this.data.todayList)
+        }) 
+      }
     })
   },
   // productList

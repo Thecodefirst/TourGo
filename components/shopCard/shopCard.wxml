@@ -1,20 +1,22 @@
 <view class="rmd-today-goods">
-    <view bindtap="navigatorGoodsInfo" data-item="{{item}}" wx:key="{{index}}" wx:for="{{dataList}}" class="rmd-today-goods-item" >
-        <view class="today-pic">
-        <image src="{{item.imageUrl}}" lazy-load="lazyLoad" />
+    <view wx:key="{{index}}" wx:for="{{dataList}}">
+        <view class="rmd-today-goods-item" bindtap="navigatorGoodsInfo" data-item="{{itemC}}" wx:for="{{item}}" wx:key="{{indexC}}" wx:for-item="itemC" wx:for-index="indexC">
+            <view class="today-pic">
+                <image src="{{itemC.imageUrl}}" lazy-load="lazyLoad" />
+            </view>
+            <view class="today-title">
+                <text>{{itemC.productName}}</text>
+            </view>
+            <view class="today-bottom">
+                <view class="price today-bottom-price">
+                    <text>￥</text>
+                    <text>{{itemC.price}}</text>
+                </view>
+                <view class="price disabled">
+                    <text>￥</text>
+                    <text>{{itemC.marketPrice}}</text>
+                </view>
+            </view>
         </view>
-        <view class="today-title">
-        <text>{{item.productName}}</text>
-        </view>
-        <view class="today-bottom">
-        <view class="price today-bottom-price">
-            <text>￥</text>
-            <text>{{item.price}}</text>
-        </view>
-        <view class="price disabled">
-            <text>￥</text>
-            <text>{{item.marketPrice}}</text>
-        </view>
-        </view>
-    </view> 
+    </view>
 </view>

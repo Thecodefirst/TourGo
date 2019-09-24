@@ -6,13 +6,7 @@ create({
   properties: {
     dataList: {
       type: Object,
-      value: {
-        imageUrl: '',
-        productName: '',
-        price: '',
-        marketPrice: '',
-        productId: ''
-      }
+      value: []
     }
   },
   data: { },
